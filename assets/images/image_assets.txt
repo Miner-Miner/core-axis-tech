@@ -1,0 +1,4 @@
+Set logo here with named logo.png
+
+Set Courousel Slider named slider1,2,3,4,5,etc.png here
+
