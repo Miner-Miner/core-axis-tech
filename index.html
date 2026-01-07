@@ -69,14 +69,6 @@ body {
   padding: 70px 0;
 }
 
-/* ================= SCROLL SLIDE CARD ================= */
-.scroll-card {
-  opacity: 0;
-  transform: translateX(120px);
-  will-change: transform, opacity;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
 footer {
   opacity: 0;
   transition: opacity 0.6s ease;
@@ -88,17 +80,16 @@ footer.visible {
 
 .scroll-card {
   opacity: 0;
-  transform: translateX(120px);
+  --translate-x: 120px; /* initial horizontal offset */
+  --translate-y: 0px;   /* vertical offset for hover */
+  transform: translateX(var(--translate-x)) translateY(var(--translate-y));
   will-change: transform, opacity;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  
-  /* Add hover animation */
+  transition: transform 0.3s ease, opacity 0.6s ease;
 }
 
 .scroll-card:hover {
-  transform: translateY(-8px); /* move up slightly */
-  transition: transform 0.3s ease; /* faster transition on hover */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* optional: subtle shadow */
+  --translate-y: -8px; /* move up on hover */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 </style>
 </head>
