@@ -1,20 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Services | Core Axis Technologies</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Services | Core Axis Technologies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ================= SECTION ================= */
+.section-title {
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: #0d6efd;
+  margin: 12px auto 0;
+}
+
+/* ================= SERVICE ROW ================= */
+.service-row {
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.service-img img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ================= ANIMATION ================= */
+.animate {
+  opacity: 0;
+  --x: 80px;
+  --y: 0px;
+  transform: translateX(var(--x)) translateY(var(--y));
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Hover lift */
+.animate:hover {
+  --y: -8px;
+}
+
+/* Reverse direction */
+.from-left { --x: -80px; }
+.from-right { --x: 80px; }
+
+/* ================= TEXT ================= */
+.service-text h4 {
+  font-weight: bold;
+}
+
+.service-text p {
+  color: #555;
+  line-height: 1.7;
+}
+</style>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">Core Axis Technologies</a>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -25,55 +91,89 @@
   </div>
 </nav>
 
+<!-- SERVICES -->
 <section class="py-5">
   <div class="container">
-    <h2 class="text-center mb-4">Our Services</h2>
 
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow">
-          <div class="card-body">
-            <h5 class="card-title">Odoo ERP Development</h5>
-            <p class="card-text">
-              Custom modules, HR, Payroll, Inventory, Accounting, and integrations.
-            </p>
-          </div>
-        </div>
+    <h2 class="text-center mb-5 section-title">Our Services</h2>
+
+    <!-- ODOO -->
+    <div class="row service-row">
+      <div class="col-md-6 col-ms-12 text-center animate from-left service-img">
+        <img src="assets/images/odoo.png" alt="Odoo">
       </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow">
-          <div class="card-body">
-            <h5 class="card-title">Android Development</h5>
-            <p class="card-text">
-              Native Android & Flutter applications for business automation.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow">
-          <div class="card-body">
-            <h5 class="card-title">Web Development</h5>
-            <p class="card-text">
-              Corporate websites, dashboards, APIs, and admin panels.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow">
-          <div class="card-body">
-            <h5 class="card-title">Custom Software</h5>
-            <p class="card-text">
-              Tailor-made software based on your business workflows.
-            </p>
-          </div>
-        </div>
+      <div class="col-md-6 col-ms-12 animate from-right service-text">
+        <h4>Odoo ERP Development</h4>
+        <p>
+We deliver complete Odoo ERP solutions to streamline and automate your business—from custom modules to HR, Payroll, Inventory, Accounting, POS, and full workflow automation. Our systems integrate banking, SMS notifications, and third-party APIs, helping reduce manual work and provide real-time insights across departments.
+<br/>
+We also build fully integrated Odoo e-commerce platforms connected with Android apps, keeping products, orders, customers, and inventory synchronized in real time. From online storefronts to mobile ordering and order tracking, we ensure a seamless shopping experience across web and mobile, all built to scale reliably with your business.
+        </p>
       </div>
     </div>
+
+    <!-- ANDROID -->
+    <div class="row service-row flex-md-row-reverse">
+      <div class="col-md-6 col-ms-12 text-center animate from-right service-img">
+        <img src="assets/images/android.jpeg" alt="Android">
+      </div>
+      <div class="col-md-6 col-ms-12 animate from-left service-text">
+        <h4>Android & iOS Development</h4>
+        <p>
+We build native Android and Flutter applications tailored to your business needs, supporting multiple types of POS systems, e-commerce platforms, inventory tracking, and customer management apps. 
+<br/>
+From offline and online operation, barcode scanning, Bluetooth printing, to real-time data synchronization, our apps handle everything your business requires. Whether it’s HR, sales, project, or inventory management, we deliver mobile software that’s reliable, scalable, and fully integrated with your existing systems.
+<br/>
+Our mobile solutions enable seamless workflow automation on the go, keeping your business connected and efficient anytime, anywhere.
+        </p>
+      </div>
+    </div>
+
+    <!-- WEB -->
+    <div class="row service-row">
+      <div class="col-md-6 col-ms-12 text-center animate from-left service-img">
+        <img src="assets/images/web.png" alt="Web">
+      </div>
+      <div class="col-md-6 col-ms-12 animate from-right service-text">
+        <h4>Web Development</h4>
+        <p>
+We design and develop modern, responsive, and secure web solutions tailored to your business needs. From corporate websites, e-commerce platforms, and admin dashboards, to custom web applications and APIs, we build systems that streamline operations and enhance user experience.
+<br/>
+Our web solutions support real-time data integration, cross-platform compatibility, and scalable architecture, ensuring your business grows without limits. Whether it’s online stores, management portals, or business automation dashboards, we deliver web applications that are fast, secure, and fully optimized.
+        </p>
+      </div>
+    </div>
+
+    <!-- WINDOWS -->
+    <div class="row service-row flex-md-row-reverse">
+      <div class="col-md-6 col-ms-12 text-center animate from-right service-img">
+        <img src="assets/images/windows.jpeg" alt="Windows">
+      </div>
+      <div class="col-md-6 col-ms-12 animate from-left service-text">
+        <h4>Windows Desktop Applications</h4>
+        <p>
+We develop robust Windows and desktop applications tailored to your business workflow. From management software, reporting tools, and automation solutions to data processing, compression tools, and specialized utilities, our desktop apps are built for performance, reliability, and ease of use.
+<br/>
+Our solutions can integrate with external devices like printers, scanners, and IoT equipment, support offline and online operations, and connect seamlessly with your ERP or other systems. Whether it’s HR, inventory, project, or finance management, we deliver desktop software that boosts productivity and scales with your business.
+        </p>
+      </div>
+    </div>
+
+    <!-- CUSTOM -->
+    <div class="row service-row">
+      <div class="col-md-6 col-ms-12 text-center animate from-left service-img">
+        <img src="assets/images/custom.jpeg" alt="Custom">
+      </div>
+      <div class="col-md-6 col-ms-12 animate from-right service-text">
+        <h4>Custom Software Solutions</h4>
+        <p>
+We deliver custom software solutions designed to fit your exact business needs. Our applications are cross-platform, seamlessly connecting Windows, Android, iOS, and web systems to work together in real time.
+<br/>
+From inventory and sales management to specialized workflow automation, our solutions can integrate with external devices such as printers, barcode scanners, IoT devices, and more. Whether it’s mobile, desktop, or web, we build software that unifies your operations, improves efficiency, and scales as your business grows.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -82,5 +182,32 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SCROLL ANIMATION -->
+<script>
+const elements = document.querySelectorAll('.animate');
+
+function animateOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+    const ratio = Math.max(0, Math.min(visibleHeight / rect.height, 1));
+
+    const x = parseInt(getComputedStyle(el).getPropertyValue('--x')) || 0;
+    const y = parseInt(getComputedStyle(el).getPropertyValue('--y')) || 0;
+
+    el.style.opacity = ratio;
+    el.style.transform = `translateX(${x * (1 - ratio)}px) translateY(${y}px)`;
+  });
+}
+
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('resize', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+</script>
+
 </body>
 </html>
+

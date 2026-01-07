@@ -60,7 +60,21 @@ body {
 /* ================= OTHER STYLES ================= */
 .carousel-img {
   height: 500px;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black/gray */
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.carousel-caption h5 {
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 0.95rem;
 }
 
 .cta-banner {
@@ -127,16 +141,66 @@ footer.visible {
 </nav>
 
 <!-- CAROUSEL -->
-<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="assets/images/slider1.png" class="d-block w-100 carousel-img">
-    </div>
-    <div class="carousel-item">
-      <img src="assets/images/slider2.png" class="d-block w-100 carousel-img">
-    </div>
-  </div>
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"> 
+  <!-- Indicators --> 
+  <div class="carousel-indicators"> 
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button> 
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button> 
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button> 
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button> 
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4"></button>  
+  </div> 
+  
+    <!-- Slides --> 
+    <div class="carousel-inner"> 
+        <div class="carousel-item active"> 
+          <img src="assets/images/slider1.png" class="d-block w-100 carousel-img" alt="Odoo ERP"> 
+            <div class="carousel-caption d-none d-md-block"> 
+              <h5>Odoo ERP Implementation & Customization</h5> 
+              <p>Streamline your business with tailored Odoo ERP solutions designed for growth and efficiency.</p> 
+            </div> 
+          </div> 
+          
+        <div class="carousel-item"> 
+            <img src="assets/images/android.jpeg" class="d-block w-100 carousel-img" alt="Android Development"/> 
+            <div class="carousel-caption d-none d-md-block"> 
+                <h5>Android & iOS Application Development</h5> 
+                <p>High-performance Android applications built to support your business operations.</p> 
+            </div> 
+        </div> 
+        <div class="carousel-item"> 
+            <img src="assets/images/web.png" class="d-block w-100 carousel-img" alt="Web Solutions"/> 
+            <div class="carousel-caption d-none d-md-block"> 
+                <h5>Web Application & Website Development</h5> 
+                <p>Modern, responsive websites and web systems built with scalability in mind.</p> 
+            </div> 
+        </div> 
+        <div class="carousel-item"> 
+            <img src="assets/images/windows.jpeg" class="d-block w-100 carousel-img" alt="Desktop Software"/> 
+            <div class="carousel-caption d-none d-md-block"> 
+                <h5>Windows Desktop Software</h5> 
+                <p>Reliable Windows applications customized for internal business workflows.</p> 
+            </div> 
+        </div> 
+        <div class="carousel-item"> 
+            <img src="assets/images/slider5.png" class="d-block w-100 carousel-img" alt="Custom IT Solutions"/> 
+            <div class="carousel-caption d-none d-md-block"> 
+                <h5>Custom IT & Software Solutions</h5> 
+                <p>We analyze your needs and build software that fits your exact business process.</p> 
+            </div> 
+        </div> 
+    </div> 
+
+    <!-- Controls --> 
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev"> 
+        <span class="carousel-control-prev-icon"></span> 
+    </button> 
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next"> 
+        <span class="carousel-control-next-icon"></span> 
+    </button> 
 </div>
+
+
 
 <!-- WHY CHOOSE US -->
 <section class="py-5">

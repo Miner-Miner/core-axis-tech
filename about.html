@@ -4,10 +4,49 @@
   <meta charset="UTF-8">
   <title>About | Core Axis Technologies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <style>
+    .contact-info {
+      margin-top: 40px;
+    }
+    .contact-info h4 {
+      margin-bottom: 20px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+    .contact-item i {
+      font-size: 1.5rem;
+      margin-right: 12px;
+      color: #0d6efd;
+      transition: color 0.3s;
+    }
+    .contact-item i:hover {
+      color: #0a58ca;
+    }
+    .social-icons a {
+      margin-right: 15px;
+      font-size: 1.8rem;
+      color: #0d6efd;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #0a58ca;
+    }
+  </style>
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">Core Axis Technologies</a>
@@ -25,11 +64,12 @@
   </div>
 </nav>
 
+<!-- ABOUT SECTION -->
 <section class="py-5">
   <div class="container">
     <h2 class="text-center mb-4">About Us</h2>
 
-    <div class="card shadow">
+    <div class="card shadow mb-4">
       <div class="card-body">
         <p>
           Core Axis Technologies is an IT solutions company delivering
@@ -37,7 +77,7 @@
         </p>
         <p>
           We specialize in Odoo ERP development, Android applications,
-          web systems, and custom software tailored to business needs.
+          web systems, windows systems and custom software tailored to business needs.
         </p>
         <p>
           Our goal is to help organizations improve efficiency, automate
@@ -45,6 +85,59 @@
         </p>
       </div>
     </div>
+
+    <div class="mb-4 text-center">
+        <p style="font-size:1.1rem;">
+        Need help or have a question? You can <strong>call</strong> us or <strong>send an email</strong>, and we’ll get back to you promptly.
+        </p>  
+    </div>
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <h4>Contact Us</h4>
+      
+      <!-- Location -->
+      <div class="contact-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>123 Business Street, Yangon, Myanmar</span>
+      </div>
+      
+      <!-- Phone -->
+      <div class="contact-item">
+        <i class="bi bi-telephone-fill"></i>
+        <a href="tel:+959123456789">+95 9 123 456 789</a>
+      </div>
+      
+      <!-- Email -->
+      <div class="contact-item">
+        <i class="bi bi-envelope-fill"></i>
+        <a href="mailto:info@coreaxistechnologies.website">info@coreaxistechnologies.website</a>
+      </div>
+      
+      <!-- Social Media -->
+      <div class="contact-item">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/yourpage" target="_blank" title="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.tiktok.com/@account1" target="_blank" title="TikTok Account 1">
+            <i class="bi bi-tiktok"></i>
+          </a>
+          <a href="https://www.tiktok.com/@account2" target="_blank" title="TikTok Account 2">
+            <i class="bi bi-tiktok"></i>
+          </a>
+          <a href="https://t.me/yourtelegram" target="_blank" title="Telegram">
+            <i class="bi bi-telegram"></i>
+          </a>
+          <a href="viber://chat?number=%2B959123456789" target="_blank" title="Viber">
+            <i class="bi bi-vimeo"></i>
+          </a>
+          <a href="https://wa.me/959123456789" target="_blank" title="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </section>
 
@@ -55,3 +148,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
