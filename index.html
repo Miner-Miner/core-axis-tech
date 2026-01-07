@@ -85,6 +85,21 @@ footer {
 footer.visible {
   opacity: 1;
 }
+
+.scroll-card {
+  opacity: 0;
+  transform: translateX(120px);
+  will-change: transform, opacity;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  
+  /* Add hover animation */
+}
+
+.scroll-card:hover {
+  transform: translateY(-8px); /* move up slightly */
+  transition: transform 0.3s ease; /* faster transition on hover */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* optional: subtle shadow */
+}
 </style>
 </head>
 
